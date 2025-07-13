@@ -655,31 +655,111 @@ table.insert(allButtons, CreateButton("99n", "99 Nights in the Forest", TabFrame
     loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/World/refs/heads/main/Four"))()
 end))
 
-table.insert(allButtons, CreateButton("kode1", "Coming Soon", TabFrames[1], function()
+table.insert(allButtons, CreateButton("kode1", "Squid Game X LEGIT", TabFrames[1], function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/fz7kWzsw"))()
+end))
+
+table.insert(allButtons, CreateButton("kode2", "Squid Game X RAGE", TabFrames[1], function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/World/refs/heads/main/F%C4%B1ve"))()
+end))
+
+table.insert(allButtons, CreateButton("kode3", "My Singing Brainrot ", TabFrames[1], function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/World/refs/heads/main/SIX"))()
+end))
+
+table.insert(allButtons, CreateButton("kode4", "Jujutsu Shenanigans", TabFrames[1], function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/PawsThePaw/Plutonium.AA/main/Plutonium.Loader.lua"))()
+end))
+
+table.insert(allButtons, CreateButton("kode5", "Steal A Fish", TabFrames[1], function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/StealAFish"))()
+end))
+
+table.insert(allButtons, CreateButton("kode6", "Shrimp Game", TabFrames[1], function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/ShrimpGame.lua"))()
+end))
+
+table.insert(allButtons, CreateButton("kode8", "Garden Tower Defense", TabFrames[1], function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/World/refs/heads/main/Seven"))()
+end))
+
+table.insert(allButtons, CreateButton("kode9", "Blox Fruit", TabFrames[1], function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/KevinGithubUsers/KevinGithubUsers/refs/heads/main/VScript(Blox%20Fruits).txt"))()
+end))
+
+table.insert(allButtons, CreateButton("kode10", "", TabFrames[1], function()
     loadstring(game:HttpGet("h"))()
 end))
 
-table.insert(allButtons, CreateButton("kode2", "Coming Soon", TabFrames[1], function()
+table.insert(allButtons, CreateButton("kode11", "", TabFrames[1], function()
     loadstring(game:HttpGet("h"))()
 end))
 
-table.insert(allButtons, CreateButton("kode3", "Coming Soon", TabFrames[1], function()
+table.insert(allButtons, CreateButton("kode12", "", TabFrames[1], function()
     loadstring(game:HttpGet("h"))()
 end))
 
-table.insert(allButtons, CreateButton("kode4", "Coming Soon", TabFrames[1], function()
+table.insert(allButtons, CreateButton("kode13", "", TabFrames[1], function()
     loadstring(game:HttpGet("h"))()
 end))
 
-table.insert(allButtons, CreateButton("kode5", "Coming Soon", TabFrames[1], function()
+table.insert(allButtons, CreateButton("kode14", "", TabFrames[1], function()
     loadstring(game:HttpGet("h"))()
 end))
 
-table.insert(allButtons, CreateButton("kode6", "Coming Soon", TabFrames[1], function()
+table.insert(allButtons, CreateButton("kode15", "", TabFrames[1], function()
     loadstring(game:HttpGet("h"))()
 end))
 
-table.insert(allButtons, CreateButton("kode7", "Coming Soon", TabFrames[1], function()
+table.insert(allButtons, CreateButton("kode16", "", TabFrames[1], function()
+    loadstring(game:HttpGet("h"))()
+end))
+
+table.insert(allButtons, CreateButton("kode7", "", TabFrames[1], function()
+    loadstring(game:HttpGet("h"))()
+end))
+
+table.insert(allButtons, CreateButton("kode7", "", TabFrames[1], function()
+    loadstring(game:HttpGet("h"))()
+end))
+
+table.insert(allButtons, CreateButton("kode7", "", TabFrames[1], function()
+    loadstring(game:HttpGet("h"))()
+end))
+
+table.insert(allButtons, CreateButton("kode7", "", TabFrames[1], function()
+    loadstring(game:HttpGet("h"))()
+end))
+
+table.insert(allButtons, CreateButton("kode7", "", TabFrames[1], function()
+    loadstring(game:HttpGet("h"))()
+end))
+
+table.insert(allButtons, CreateButton("kode7", "", TabFrames[1], function()
+    loadstring(game:HttpGet("h"))()
+end))
+
+table.insert(allButtons, CreateButton("kode7", "", TabFrames[1], function()
+    loadstring(game:HttpGet("h"))()
+end))
+
+table.insert(allButtons, CreateButton("kode7", "", TabFrames[1], function()
+    loadstring(game:HttpGet("h"))()
+end))
+
+table.insert(allButtons, CreateButton("kode7", "", TabFrames[1], function()
+    loadstring(game:HttpGet("h"))()
+end))
+
+table.insert(allButtons, CreateButton("kode7", "", TabFrames[1], function()
+    loadstring(game:HttpGet("h"))()
+end))
+
+table.insert(allButtons, CreateButton("kode7", "", TabFrames[1], function()
+    loadstring(game:HttpGet("h"))()
+end))
+
+table.insert(allButtons, CreateButton("kode7", "", TabFrames[1], function()
     loadstring(game:HttpGet("h"))()
 end))
 
