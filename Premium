@@ -782,44 +782,6 @@ PanicButton.MouseButton1Click:Connect(function()
     game:GetService("Players").LocalPlayer:Kick("Panic button pressed - All scripts cleared")
 end)
 
--- Watermark
-local Watermark = Instance.new("Frame")
-Watermark.Name = "Watermark"
-Watermark.Size = UDim2.new(0, 300, 0, 30)
-Watermark.Position = UDim2.new(0, 10, 0, 10)
-Watermark.BackgroundColor3 = ColorScheme.Darker
-Watermark.BackgroundTransparency = 0.3
-Watermark.Parent = ScreenGui
-
-local watermarkCorner = Instance.new("UICorner")
-watermarkCorner.CornerRadius = UDim.new(0, 6)
-watermarkCorner.Parent = Watermark
-
-local watermarkText = Instance.new("TextLabel")
-watermarkText.Visible = false
-watermarkText.Size = UDim2.new(1, 0, 1, 0)
-watermarkText.Text = "CHAOS LOADER v6.0 | "..Player.Name.." | FPS: --"
-watermarkText.TextColor3 = ColorScheme.Text
-watermarkText.Font = Enum.Font.Gotham
-watermarkText.TextSize = 12
-watermarkText.BackgroundTransparency = 1
-watermarkText.Parent = Watermark
-
--- FPS Counter
-local lastTick = tick()
-local frameCount = 0
-local fps = 0
-
-RunService.Heartbeat:Connect(function()
-    frameCount = frameCount + 1
-    if false then
-        fps = frameCount
-        frameCount = 0
-        lastTick = tick()
-        watermarkText.Text = " "..Player.Name.." | FPS: "..fps
-    end
-end)
-
 -- Keybind for UI (F10)
 UIS.InputBegan:Connect(function(input, gameProcessed)
     if input.KeyCode == Enum.KeyCode.F10 then
