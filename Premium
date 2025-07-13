@@ -796,6 +796,7 @@ watermarkCorner.CornerRadius = UDim.new(0, 6)
 watermarkCorner.Parent = Watermark
 
 local watermarkText = Instance.new("TextLabel")
+watermarkText.Visible = false
 watermarkText.Size = UDim2.new(1, 0, 1, 0)
 watermarkText.Text = "CHAOS LOADER v6.0 | "..Player.Name.." | FPS: --"
 watermarkText.TextColor3 = ColorScheme.Text
@@ -811,11 +812,11 @@ local fps = 0
 
 RunService.Heartbeat:Connect(function()
     frameCount = frameCount + 1
-    if tick() - lastTick >= 1 then
+    if false then
         fps = frameCount
         frameCount = 0
         lastTick = tick()
-        watermarkText.Text = "SWIFT LOADER v6.0 | "..Player.Name.." | FPS: "..fps
+        watermarkText.Text = " "..Player.Name.." | FPS: "..fps
     end
 end)
 
@@ -839,5 +840,5 @@ OpenTween:Play()
 -- Initial notification
 task.spawn(function()
     task.wait(1)
-    ShowNotification("Welcome", "SWIFT LOADER v6.0 loaded successfully!", ColorScheme.Primary)
+    ShowNotification("Welcome", "Chaos Loader V1.0 loaded successfully!", ColorScheme.Primary)
 end)
