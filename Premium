@@ -611,84 +611,48 @@ table.insert(allButtons, CreateButton("InfiniteYield", "Infinite Yield", TabFram
     loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 end))
 
-table.insert(allButtons, CreateButton("Animal", "Animal ESP", TabFrames[1], function()
+table.insert(allButtons, CreateButton("Animal", "Animal ESP - The Wild West", TabFrames[1], function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/TWW/refs/heads/main/AnimalESP"))()
 end))
 
-table.insert(allButtons, CreateButton("FlyHack", "YAKINDA", TabFrames[1], function()
+table.insert(allButtons, CreateButton("FlyHack", "COMING SOON", TabFrames[1], function()
     loadstring(game:HttpGet("a"))()
 end))
 
-table.insert(allButtons, CreateButton("Noclip", "YAKINDA", TabFrames[1], function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/Noclip.lua"))()
+table.insert(allButtons, CreateButton("occo", "Octopus Game", TabFrames[1], function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/Squid/refs/heads/main/Game"))()
 end))
 
-table.insert(allButtons, CreateButton("SpeedHack", "Ink Game", TabFrames[1], function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/Speed.lua"))()
+table.insert(allButtons, CreateButton("Ink", "Ink Game", TabFrames[1], function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/lebumbum/leyield/refs/heads/main/inkgame"))()
 end))
 
 table.insert(allButtons, CreateButton("dun", "Dungeon Leveling - Key: SoC14BpapEq", TabFrames[1], function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/AA/refs/heads/main/E"))()
 end))
 
-table.insert(allButtons, CreateButton("SpeedHack", "YAKINDA DEDİK AMK", TabFrames[1], function()
+table.insert(allButtons, CreateButton("SpeedHack", "COMING SOON", TabFrames[1], function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/Speed.lua"))()
 end))
 
-table.insert(allButtons, CreateButton("SpeedHack", "YAKINDA DEDİK AMK", TabFrames[1], function()
+table.insert(allButtons, CreateButton("SpeedHack", "COMING SOON", TabFrames[1], function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/Speed.lua"))()
 end))
 
-table.insert(allButtons, CreateButton("SpeedHack", "YAKINDA DEDİK AMK", TabFrames[1], function()
+table.insert(allButtons, CreateButton("SpeedHack", "COMING SOON", TabFrames[1], function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/Speed.lua"))()
 end))
 
-table.insert(allButtons, CreateButton("SpeedHack", "YAKINDA DEDİK AMK", TabFrames[1], function()
+table.insert(allButtons, CreateButton("SpeedHack", "COMING SOON", TabFrames[1], function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/Speed.lua"))()
 end))
 
-table.insert(allButtons, CreateButton("SpeedHack", "YAKINDA DEDİK AMK", TabFrames[1], function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/Speed.lua"))()
-end))
-
-table.insert(allButtons, CreateButton("TransfurOutbreak", "Transfur Outbreak", TabFrames[1], function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Kw6m/Subbers-scripts/main/TOmain.lua"))()
-end))
-
-table.insert(allButtons, CreateButton("Criminality2", "Criminality Melee God-Mode", TabFrames[1], function()
+table.insert(allButtons, CreateButton("SpeedHack", "COMING SOON", TabFrames[1], function()
     loadstring(game:HttpGet("h"))()
 end))
 
-table.insert(allButtons, CreateButton("Criminality Rage", "Criminality Rage", TabFrames[1], function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/PresidentAnvil/crimlight/main/criminologylight.lua"))()
-end))
-
-table.insert(allButtons, CreateButton("Criminality Legit", "Criminality Legit", TabFrames[1], function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/PresidentAnvil/crimlight/main/criminologylight.lua"))()
-end))
-
-table.insert(allButtons, CreateButton("Fisch", "Fisch", TabFrames[1], function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua"))()
-end))
-
-table.insert(allButtons, CreateButton("Murder Mystery 2", "Murder Mystery 2", TabFrames[1], function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Joystickplays/psychic-octo-invention/main/yarhm.lua"))()
-end))
-
-table.insert(allButtons, CreateButton("Build A Boat", "Build A Boat", TabFrames[1], function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/DiosDi/VexonHub/refs/heads/main/VexonHub"))()
-end))
-
-table.insert(allButtons, CreateButton("The Strongest Battlegrounds", "The Strongest Battlegrounds", TabFrames[1], function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/DiosDi/VexonHub/refs/heads/main/VexonHub"))()
-end))
-
-table.insert(allButtons, CreateButton("BloxFruit", "BloxFruit", TabFrames[1], function()
-    loadstring(game:HttpGet("https://nicuse.xyz/MainHub.lua"))()
-end))
-
-table.insert(allButtons, CreateButton("Blade Ball", "Blade Ball", TabFrames[1], function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/as6cd0/SP_Hub/refs/heads/main/BladeBallEnglish"))()
+table.insert(allButtons, CreateButton("TransfurOutbreak", "Transfur Outbreak", TabFrames[1], function()
+    loadstring(game:HttpGet("h"))()
 end))
 
 -- PLAYER TAB
