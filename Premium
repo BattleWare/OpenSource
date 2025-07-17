@@ -691,12 +691,12 @@ table.insert(allButtons, CreateButton("kode10", "Forsaken", TabFrames[1], functi
     loadstring(game:HttpGet("https://raw.githubusercontent.com/MaybeNotMandy/forsaken/refs/heads/main/sae"))()
 end))
 
-table.insert(allButtons, CreateButton("kode11", "Coming Soon", TabFrames[1], function()
-    loadstring(game:HttpGet("h"))()
+table.insert(allButtons, CreateButton("kode11", "Goalbound", TabFrames[1], function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/AA/refs/heads/main/A"))()
 end))
 
-table.insert(allButtons, CreateButton("kode12", "Coming Soon", TabFrames[1], function()
-    loadstring(game:HttpGet("h"))()
+table.insert(allButtons, CreateButton("kode12", "One Punch Training", TabFrames[1], function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/AA/refs/heads/main/C"))()
 end))
 
 table.insert(allButtons, CreateButton("kode13", "Coming Soon", TabFrames[1], function()
