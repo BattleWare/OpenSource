@@ -699,12 +699,12 @@ table.insert(allButtons, CreateButton("kode12", "One Punch Training", TabFrames[
     loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/AA/refs/heads/main/C"))()
 end))
 
-table.insert(allButtons, CreateButton("kode13", "Coming Soon", TabFrames[1], function()
-    loadstring(game:HttpGet("h"))()
+table.insert(allButtons, CreateButton("kode13", "Sol's RNG Rage", TabFrames[1], function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/era9/main/sols%20Source:%20https://cheater.fun/hacks_roblox/8837-the-best-script-sols-rng-pc-mobile.html"))()
 end))
 
-table.insert(allButtons, CreateButton("kode14", "Coming Soon", TabFrames[1], function()
-    loadstring(game:HttpGet("h"))()
+table.insert(allButtons, CreateButton("kode14", "Sol's RNG Legit", TabFrames[1], function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/LHking123456/n4dgW8TF7rNyL/refs/heads/main/Sols%20Source:%20https://cheater.fun/hacks_roblox/8837-the-best-script-sols-rng-pc-mobile.html"))()
 end))
 
 table.insert(allButtons, CreateButton("kode15", "Coming Soon", TabFrames[1], function()
