@@ -707,12 +707,12 @@ table.insert(allButtons, CreateButton("kode14", "Sol's RNG Legit", TabFrames[1],
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LHking123456/n4dgW8TF7rNyL/refs/heads/main/Sols%20Source:%20https://cheater.fun/hacks_roblox/8837-the-best-script-sols-rng-pc-mobile.html"))()
 end))
 
-table.insert(allButtons, CreateButton("kode15", "Coming Soon", TabFrames[1], function()
-    loadstring(game:HttpGet("h"))()
+table.insert(allButtons, CreateButton("kode15", "Fish and Fight", TabFrames[1], function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/mazino45/main/refs/heads/main/MainScript.lua%20Source:%20https://cheater.fun/hacks_roblox/11686-fish-and-fight-script.html"))()
 end))
 
-table.insert(allButtons, CreateButton("kode16", "Coming Soon", TabFrames[1], function()
-    loadstring(game:HttpGet("h"))()
+table.insert(allButtons, CreateButton("kode16", "AnimeWare HUB Keyless", TabFrames[1], function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/BattleWare/OpenSource/refs/heads/main/FREE"))()
 end))
 
 -- PLAYER TAB
