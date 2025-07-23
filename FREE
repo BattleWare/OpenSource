@@ -246,8 +246,8 @@ PlayerSection:NewButton("Noclip", "Walk threw Walls" , function()
 end)
  
 local Tab = Window:NewTab("Credits")
-local Section = Tab:NewSection("Discord: Zxin#9433")
-local Section = Tab:NewSection("Youtube Channel: @Zxin69420")
+local Section = Tab:NewSection("Discord: gg/animeware")
+local Section = Tab:NewSection("Youtube Channel: Afg Scripts")
  
 Section:NewKeybind("Keybind", "Open/Close Menu", Enum.KeyCode.V, function()
     Library:ToggleUI(V)
