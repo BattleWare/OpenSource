@@ -124,6 +124,15 @@ local Toggle = Tab:CreateToggle({
    end,
 })
 
+local Tab = Window:CreateTab("Kill Aura", 4483362458) -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "babafingos Menu",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/babayagaof0/-TurkCezaevi-MrBabafingos-Babayaga/refs/heads/main/cezayedikabi.lua"))()
+   end,
+})
+
 local Tab = Window:CreateTab("Premium", 4483362458) -- Title, Image
 
 local Button = Tab:CreateButton({
