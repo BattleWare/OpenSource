@@ -5,7 +5,7 @@ local Window = Rayfield:CreateWindow({
    Name = "AnimeWare Türk Cezaevi",
    Icon = 569819347, -- Use 0 for no icon
    LoadingTitle = "AnimeWare CezaEvi RP",
-   LoadingSubtitle = "by Army - 984 Dêin God ",
+   LoadingSubtitle = "by Army - 984 Dêin God - babafingos ",
    ShowText = "Rayfield", -- for mobile users to unhide rayfield, change if you'd like
    Theme = "Default",
 
@@ -299,6 +299,14 @@ local Button = Tab:CreateButton({
 local pos = Vector3.new(510.62, 31.42, -252.69)
 local Button = Tab:CreateButton({
     Name = "Hücreler Üst Katman",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+    end,
+})
+
+local pos = Vector3.new(361.96, 16.87, -399.90)
+local Button = Tab:CreateButton({
+    Name = "Avlu Üst Katman",
     Callback = function()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
     end,
