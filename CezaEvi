@@ -135,77 +135,39 @@ local Button = Tab:CreateButton({
 
 local Tab = Window:CreateTab("Premium", 4483362458) -- Title, Image
 
-local Button = Tab:CreateButton({
-   Name = "Sunucuyu Çökert",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/TouchFling/refs/heads/main/premium"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Fling All",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/TouchFling/refs/heads/main/premium"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Herkeze AK-47 Ver - Sadece Mahkumlar",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/TouchFling/refs/heads/main/premium"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Herkeze Taser At - Personel Olmalısın",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/TouchFling/refs/heads/main/premium"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Canın azaldığında Yer Altına Gir",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/TouchFling/refs/heads/main/premium"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Silent Aim",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/TouchFling/refs/heads/main/premium"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "ESP Legit",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/TouchFling/refs/heads/main/premium"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Bütün Araçları Yanına Çek",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/TouchFling/refs/heads/main/premium"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Araçlardan Aura yarat",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/TouchFling/refs/heads/main/premium"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Yazılımcının Büyüsü :3",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/TouchFling/refs/heads/main/premium"))()
-   end,
-})
 
 local Tab = Window:CreateTab("Teleports", 4483362458) -- Title, Image
+
+local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local localPlayer = Players.LocalPlayer
+
+local pos = Vector3.new(494.55, 16.37, -347.01)
+local targetCFrame = CFrame.new(pos)
+
+local function smoothTeleport()
+    local character = localPlayer.Character
+    if not character then return end
+    local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+    if not humanoidRootPart then return end
+
+    local tweenInfo = TweenInfo.new(
+        5,
+        Enum.EasingStyle.Quad,
+        Enum.EasingDirection.Out 
+    )
+
+    local tween = TweenService:Create(humanoidRootPart, tweenInfo, {CFrame = targetCFrame})
+    tween:Play()
+
+    tween.Completed:Wait()
+    print("Teleport tamamlandı!")
+end
+
+local Button = Tab:CreateButton({
+    Name = "ÇamaşırHane",
+    Callback = smoothTeleport
+})
 
 local pos = Vector3.new(503.27, 16.37, -251.20)
 local Button = Tab:CreateButton({
