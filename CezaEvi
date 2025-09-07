@@ -1,388 +1,904 @@
---https://docs.sirius.menu/rayfield
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+--[[
+    🚀 SWIFT LOADER v6.0
+    🔥 Premium Script Hub
+    🛡️ MIT License - All rights reserved
+    🌟 https://github.com/FemWareDevelper/Secret/blob/main/LICENSE
+]]
 
-local Window = Rayfield:CreateWindow({
-   Name = "AnimeWare Türk Cezaevi",
-   Icon = 569819347, -- Use 0 for no icon
-   LoadingTitle = "AnimeWare CezaEvi RP",
-   LoadingSubtitle = "by Army - 984 Dêin God - babafingos ",
-   ShowText = "Rayfield", -- for mobile users to unhide rayfield, change if you'd like
-   Theme = "Default",
-
-   ToggleUIKeybind = "K",
-
-   DisableRayfieldPrompts = false,
-   DisableBuildWarnings = false,
-
-   ConfigurationSaving = {
-      Enabled = true,
-      FolderName = nil,
-      FileName = "Big Hub"
-   },
-
-   Discord = {
-      Enabled = true,
-      Invite = "noinvitelink",
-      RememberJoins = true
-   },
-
-   KeySystem = false,
-   KeySettings = {
-      Title = "Example Key",
-      Subtitle = "Key System",
-      Note = "This is to showcase the Rayfield Key System! Type 1 to continue",
-      FileName = "Key",
-      SaveKey = false,
-      GrabKeyFromSite = false,
-      Key = {"1"}
-   }
-})
-
-local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
-
-
-Rayfield:Notify({
-   Title = "Notification",
-   Content = "Hii",
-   Duration = 6.5,
-   Image = "home",
-})
-
-local Button = Tab:CreateButton({
-   Name = "Infinite Yield",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "ESP LEGIT - F5",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/PATCHED/refs/heads/main/ESP"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "AIMBOT LEGIT - F",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/PATCHED/refs/heads/main/Scriptv99"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Touch Fling - İnsanlara Dokun :D",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/TouchFling/refs/heads/main/TouchFling"))()
-   end,
-})
-
-local pos = Vector3.new(862.35, 13.00, -1586.57)
-local Button = Tab:CreateButton({
-    Name = "İsyancı Ol - Sorunsuz",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
-    end,
-})
-
-local pos = Vector3.new(862.35, 13.00, -1586.57)
-local Button = Tab:CreateButton({
-    Name = "İsyancı Ol - Siyah Ekran Verebilir",
-    Callback = function()
-        local player = game.Players.LocalPlayer
-        local char = player.Character or player.CharacterAdded:Wait()
-        local hrp = char:WaitForChild("HumanoidRootPart")
-
-        hrp.CFrame = CFrame.new(pos)
-
-        local humanoid = char:FindFirstChildOfClass("Humanoid")
-        if humanoid then
-            humanoid.Health = 0
-        end
-    end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Kendini Öldür",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/AsylumLife/refs/heads/main/Reset"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Sakso Çek - R6",
-   Callback = function()
-      loadstring(game:HttpGet("https://pastefy.app/wa3v2Vgm/raw"))()
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Toggle Example",
-   CurrentValue = false,
-   Flag = "Toggle1",
-   Callback = function(Value)
-      print(Value)
-   end,
-})
-
-local Tab = Window:CreateTab("Kill Aura", 4483362458)
-
-local Button = Tab:CreateButton({
-   Name = "babafingos Menu",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/babayagaof0/-TurkCezaevi-MrBabafingos-Babayaga/refs/heads/main/cezayedikabi.lua"))()
-   end,
-})
-
-local Label = Tab:CreateLabel("Discord: babafingos", "rewind")
-
-local Tab = Window:CreateTab("Premium", 4483362458) -- Title, Image
-
-local Label = Tab:CreateLabel("Artık Mevcut Değil", "rewind")
-
-local Tab = Window:CreateTab("Teleports", 4483362458) -- Title, Image
-
+local Player = game:GetService("Players").LocalPlayer
 local TweenService = game:GetService("TweenService")
-local Players = game:GetService("Players")
-local localPlayer = Players.LocalPlayer
-
-local pos = Vector3.new(494.55, 16.37, -347.01)
-local targetCFrame = CFrame.new(pos)
-
-local function smoothTeleport()
-    local character = localPlayer.Character
-    if not character then return end
-    local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
-    if not humanoidRootPart then return end
-
-    local tweenInfo = TweenInfo.new(
-        5,
-        Enum.EasingStyle.Quad,
-        Enum.EasingDirection.Out 
-    )
-
-    local tween = TweenService:Create(humanoidRootPart, tweenInfo, {CFrame = targetCFrame})
-    tween:Play()
-
-    tween.Completed:Wait()
-    print("Teleport tamamlandı!")
-end
-
-local Button = Tab:CreateButton({
-    Name = "Test",
-    Callback = smoothTeleport
-})
-
-local pos = Vector3.new(503.27, 16.37, -251.20)
-local Button = Tab:CreateButton({
-    Name = "Hücreler",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
-    end,
-})
-
-local pos = Vector3.new(775.82, 20.20, -1606.02)
-local Button = Tab:CreateButton({
-    Name = "Kaçakcı Bölgesi",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
-    end,
-})
-
-local pos = Vector3.new(494.55, 16.37, -347.01)
-local Button = Tab:CreateButton({
-    Name = "ÇamaşırHane",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
-    end,
-})
-
-local pos = Vector3.new(564.09, -1.33, -377.37)
-local Button = Tab:CreateButton({
-    Name = "Duş Alma yeri",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
-    end,
-})
-
-local pos = Vector3.new(492.11, 1.26, -298.57)
-local Button = Tab:CreateButton({
-    Name = "Fabrika",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
-    end,
-})
-
-local pos = Vector3.new(449.87, 16.37, -198.80)
-local Button = Tab:CreateButton({
-    Name = "Hücre Kaçakcısı",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
-    end,
-})
-
-local pos = Vector3.new(268.80, 16.10, -252.88)
-local Button = Tab:CreateButton({
-    Name = "Hapishane Sınırı",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
-    end,
-})
-
-local pos = Vector3.new(374.68, -27.90, -345.47)
-local Button = Tab:CreateButton({
-    Name = "Girilmeyen Yer",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
-    end,
-})
-
-local pos = Vector3.new(520.86, -22.02, -476.39)
-local Button = Tab:CreateButton({
-    Name = "Otopark",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
-    end,
-})
-
-local pos = Vector3.new(-297.33, 110.76, -373.57)
-local Button = Tab:CreateButton({
-    Name = "Terk Edilmiş Kule",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
-    end,
-})
-
-local pos = Vector3.new(1130.37, 114.22, -1074.65)
-local Button = Tab:CreateButton({
-    Name = "Vampirin Yaşadığı yer",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
-    end,
-})
-
-local pos = Vector3.new(-1162.31, 48.90, -1826.62)
-local Button = Tab:CreateButton({
-    Name = "Gizemli Anime Kızı",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
-    end,
-})
-
-local pos = Vector3.new(-1822.94, 10.56, -309.58)
-local Button = Tab:CreateButton({
-    Name = "Başkent",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
-    end,
-})
-
-local pos = Vector3.new(447.29, -29.40, -262.54)
-local Button = Tab:CreateButton({
-    Name = "Harita Altı",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
-    end,
-})
-
-local Tab = Window:CreateTab("Araba", 4483362458) -- Title, Image
-
-local Label = Tab:CreateLabel("Note: Üst Katmanlı Teleportlarda Araba Kullanın", "rewind")
-
-local pos = Vector3.new(785.78, 89.50, -1514.60)
-local Button = Tab:CreateButton({
-    Name = "Kaçakcı Üst Katman",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
-    end,
-})
-
-local pos = Vector3.new(510.62, 31.42, -252.69)
-local Button = Tab:CreateButton({
-    Name = "Hücreler Üst Katman",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
-    end,
-})
-
-local pos = Vector3.new(361.96, 16.87, -399.90)
-local Button = Tab:CreateButton({
-    Name = "Avlu Üst Katman",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
-    end,
-})
-
-local pos = Vector3.new(-2366.55, -29.39, -844.09)
-local Button = Tab:CreateButton({
-    Name = "Çorak Topraklar Üst Katman",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
-    end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Araba 150x hız",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/Temelozellik/refs/heads/main/ArabaH%C4%B1z"))()
-   end,
-})
-
-local Tab = Window:CreateTab("Obje", 4483362458) -- Title, Image
-
-local Button = Tab:CreateButton({
-   Name = "Elektirik Telleri Sil",
-   Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/Temelozellik/refs/heads/main/Obje"))()
-   end,
-})
-
-local Label = Tab:CreateLabel("Burayı şuanda geliştiriyorum sabredin", "rewind")
-
-local Tab = Window:CreateTab("Credits", 4483362458) -- Title, Image
-
-local Label = Tab:CreateLabel("https://discord.gg/w4zqYtYNMq", "rewind")
-
-local Paragraph = Tab:CreateParagraph({
-   Title = "Güncelleştirmeler",
-   Content = "Premium Özellikler eklendi Pek Güncelleme Yapmayı düşünmüyoruz Discordan Önerebilirsiniz"
-})
-
-local Paragraph = Tab:CreateParagraph({
-   Title = "Geliştiri Açıklaması",
-   Content = "Yabancı Oyunlar İçin Script Üreten Geliştirici Ekibiyiz çoğu zaman Türk oyunlar oynuyoruz genellikle ara sıra türk oyunlar için script yapıyoruz Bu Script yaparken amacımız genel oyuncu kitlesine yardım etmek kötü bir niyetim yok sorumluluğu AnimeWare ekbimiz üstleniyor Script silinmeyecektir aptal gibi Bize yazmayın Script Ara Sırta güncelleştirmeler yapabiliriz yani Kapanabilir ancak tekrar açarız sorun etmeyin."
-})
-
-local Paragraph = Tab:CreateParagraph({
-   Title = "İletişim Adresim",
-   Content = "Discord: chinjungxx"
-})
-
---____________________________    
-local invite = "w4zqYtYNMq" --|-- // Invite code, example: https://discord.gg/pinguindev, put pinguindev. //
---____________________________|
+local RunService = game:GetService("RunService")
+local UIS = game:GetService("UserInputService")
 local HttpService = game:GetService("HttpService")
 
-local httprequest = (syn and syn.request) 
-    or (http and http.request) 
-    or http_request 
-    or (fluxus and fluxus.request) 
-    or request
+-- Modern Color Scheme with Gradient Support
+local ColorScheme = {
+    Dark = Color3.fromRGB(15, 15, 25),
+    Darker = Color3.fromRGB(10, 10, 20),
+    Primary = Color3.fromRGB(0, 170, 255),
+    Secondary = Color3.fromRGB(0, 200, 255),
+    Accent = Color3.fromRGB(0, 230, 255),
+    Text = Color3.fromRGB(240, 240, 255),
+    Gray = Color3.fromRGB(50, 50, 65),
+    DarkGray = Color3.fromRGB(30, 30, 45),
+    Error = Color3.fromRGB(255, 75, 75),
+    Success = Color3.fromRGB(0, 200, 100),
+    Warning = Color3.fromRGB(255, 175, 50)
+}
 
-if not httprequest then
-    warn("No valid HTTP request function found.")
-    return
+-- Gradient Creation Function
+local function CreateGradient(parent, rotation)
+    local gradient = Instance.new("UIGradient")
+    gradient.Color = ColorSequence.new({
+        ColorSequenceKeypoint.new(0, ColorScheme.Primary),
+        ColorSequenceKeypoint.new(1, ColorScheme.Accent)
+    })
+    gradient.Rotation = rotation or 90
+    gradient.Parent = parent
+    return gradient
 end
 
-httprequest({
-    Url = 'http://127.0.0.1:6463/rpc?v=1',
-    Method = 'POST',
-    Headers = {
-        ['Content-Type'] = 'application/json',
-        Origin = 'https://discord.com'
-    },
-    Body = HttpService:JSONEncode({
-        cmd = 'INVITE_BROWSER',
-        nonce = HttpService:GenerateGUID(false),
-        args = {code = invite}
-    })
+-- Notification System
+local function ShowNotification(title, message, color)
+    local notification = Instance.new("Frame")
+    notification.Name = "Notification"
+    notification.Size = UDim2.new(0, 300, 0, 80)
+    notification.Position = UDim2.new(1, 10, 1, -90)
+    notification.BackgroundColor3 = ColorScheme.Darker
+    notification.BorderSizePixel = 0
+    notification.AnchorPoint = Vector2.new(1, 1)
+    notification.Parent = game.CoreGui:FindFirstChild("UltraEliteExecuter") or ScreenGui
+    
+    local corner = Instance.new("UICorner")
+    corner.CornerRadius = UDim.new(0, 8)
+    corner.Parent = notification
+    
+    local highlight = Instance.new("Frame")
+    highlight.Size = UDim2.new(1, 0, 0, 4)
+    highlight.Position = UDim2.new(0, 0, 0, 0)
+    highlight.BackgroundColor3 = color or ColorScheme.Primary
+    highlight.BorderSizePixel = 0
+    highlight.Parent = notification
+    
+    CreateGradient(highlight)
+    
+    local titleLabel = Instance.new("TextLabel")
+    titleLabel.Size = UDim2.new(1, -20, 0, 20)
+    titleLabel.Position = UDim2.new(0, 10, 0, 10)
+    titleLabel.BackgroundTransparency = 1
+    titleLabel.Text = title
+    titleLabel.TextColor3 = ColorScheme.Text
+    titleLabel.Font = Enum.Font.GothamBold
+    titleLabel.TextSize = 14
+    titleLabel.TextXAlignment = Enum.TextXAlignment.Left
+    titleLabel.Parent = notification
+    
+    local messageLabel = Instance.new("TextLabel")
+    messageLabel.Size = UDim2.new(1, -20, 1, -40)
+    messageLabel.Position = UDim2.new(0, 10, 0, 30)
+    messageLabel.BackgroundTransparency = 1
+    messageLabel.Text = message
+    messageLabel.TextColor3 = Color3.new(0.8, 0.8, 0.9)
+    messageLabel.Font = Enum.Font.Gotham
+    messageLabel.TextSize = 12
+    messageLabel.TextXAlignment = Enum.TextXAlignment.Left
+    messageLabel.TextYAlignment = Enum.TextYAlignment.Top
+    messageLabel.TextWrapped = true
+    messageLabel.Parent = notification
+    
+    local tweenIn = TweenService:Create(
+        notification,
+        TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+        {Position = UDim2.new(1, -10, 1, -90)}
+    )
+    tweenIn:Play()
+    
+    task.delay(5, function()
+        local tweenOut = TweenService:Create(
+            notification,
+            TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.In),
+            {Position = UDim2.new(1, 10, 1, -90)}
+        )
+        tweenOut:Play()
+        tweenOut.Completed:Wait()
+        notification:Destroy()
+    end)
+end
+
+-- Main UI Creation
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "UltraEliteExecuter"
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+-- Main Frame ayarları (DEĞİŞTİRİLMİŞ KISIM)
+local MainFrame = Instance.new("Frame")
+MainFrame.Name = "MainFrame"
+MainFrame.Size = UDim2.new(0, 850, 0, 650)
+MainFrame.Position = UDim2.new(0.5, -425, 0.5, -325) -- Offset ile merkezleme
+MainFrame.BackgroundColor3 = ColorScheme.Dark
+MainFrame.Active = true
+MainFrame.Draggable = true  -- Sürükleme özelliği AÇIK
+MainFrame.Parent = ScreenGui
+
+-- AnchorPoint KAPALI (çünkü Draggable ile çakışıyor)
+-- MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)  -- BU SATIRI KAPATIN
+
+-- Animasyon kodu (DEĞİŞTİRİLMİŞ)
+MainFrame.Size = UDim2.new(0, 0, 0, 0)
+local OpenTween = TweenService:Create(MainFrame, TweenInfo.new(0.7), {
+    Size = UDim2.new(0, 850, 0, 650),
+    Position = UDim2.new(0.5, -425, 0.5, -325) -- Aynı pozisyonda kalacak
 })
+OpenTween:Play()
+
+-- Glass Effect
+local glassEffect = Instance.new("Frame")
+glassEffect.Size = UDim2.new(1, 0, 1, 0)
+glassEffect.BackgroundTransparency = 0.95
+glassEffect.BackgroundColor3 = Color3.new(1, 1, 1)
+glassEffect.BorderSizePixel = 0
+glassEffect.ZIndex = -1
+glassEffect.Parent = MainFrame
+
+local blur = Instance.new("BlurEffect")
+blur.Size = 10
+blur.Parent = MainFrame
+
+-- UI Corner and Shadow
+local UICorner = Instance.new("UICorner")
+UICorner.CornerRadius = UDim.new(0, 14)
+UICorner.Parent = MainFrame
+
+local shadow = Instance.new("ImageLabel")
+shadow.Name = "Shadow"
+shadow.Size = UDim2.new(1, 10, 1, 10)
+shadow.Position = UDim2.new(0, -5, 0, -5)
+shadow.BackgroundTransparency = 1
+shadow.Image = "rbxassetid://1316045217"
+shadow.ImageColor3 = Color3.new(0, 0, 0)
+shadow.ImageTransparency = 0.8
+shadow.ScaleType = Enum.ScaleType.Slice
+shadow.SliceCenter = Rect.new(10, 10, 118, 118)
+shadow.ZIndex = -1
+shadow.Parent = MainFrame
+
+-- Premium Title Bar
+local TitleBar = Instance.new("Frame")
+TitleBar.Name = "TitleBar"
+TitleBar.Size = UDim2.new(1, 0, 0, 50)
+TitleBar.Position = UDim2.new(0, 0, 0, 0)
+TitleBar.BackgroundColor3 = ColorScheme.Darker
+TitleBar.BackgroundTransparency = 0.2
+TitleBar.BorderSizePixel = 0
+TitleBar.Parent = MainFrame
+
+local titleGradient = Instance.new("Frame")
+titleGradient.Size = UDim2.new(1, 0, 0, 4)
+titleGradient.Position = UDim2.new(0, 0, 1, -4)
+titleGradient.BackgroundColor3 = Color3.new(1, 1, 1)
+titleGradient.BorderSizePixel = 0
+titleGradient.Parent = TitleBar
+
+CreateGradient(titleGradient, 0)
+
+-- Logo and Title
+local Logo = Instance.new("ImageLabel")
+Logo.Name = "Logo"
+Logo.Size = UDim2.new(0, 32, 0, 32)
+Logo.Position = UDim2.new(0, 15, 0.5, -16)
+Logo.BackgroundTransparency = 1
+Logo.Image = "rbxassetid://16489242826"
+Logo.ImageColor3 = ColorScheme.Accent
+Logo.Parent = TitleBar
+
+local Title = Instance.new("TextLabel")
+Title.Name = "Title"
+Title.Size = UDim2.new(0, 300, 0, 30)
+Title.Position = UDim2.new(0, 60, 0.5, -15)
+Title.BackgroundTransparency = 1
+Title.Text = "Order Of Chaos"
+Title.TextColor3 = ColorScheme.Text
+Title.Font = Enum.Font.GothamBlack
+Title.TextSize = 18
+Title.TextXAlignment = Enum.TextXAlignment.Left
+Title.Parent = TitleBar
+
+local versionTag = Instance.new("TextLabel")
+versionTag.Size = UDim2.new(0, 60, 0, 18)
+versionTag.Position = UDim2.new(0, 200, 0.5, -9)
+versionTag.BackgroundColor3 = ColorScheme.Primary
+versionTag.Text = "PREMIUM"
+versionTag.TextColor3 = Color3.new(1, 1, 1)
+versionTag.Font = Enum.Font.GothamBold
+versionTag.TextSize = 10
+versionTag.Parent = TitleBar
+
+local corner = Instance.new("UICorner")
+corner.CornerRadius = UDim.new(0, 4)
+corner.Parent = versionTag
+
+-- Close Button with Hover Effect
+local CloseButton = Instance.new("TextButton")
+CloseButton.Name = "CloseButton"
+CloseButton.Size = UDim2.new(0, 30, 0, 30)
+CloseButton.Position = UDim2.new(1, -40, 0.5, -15)
+CloseButton.BackgroundColor3 = ColorScheme.Darker
+CloseButton.BackgroundTransparency = 0.5
+CloseButton.TextColor3 = ColorScheme.Text
+CloseButton.Text = "✕"
+CloseButton.Font = Enum.Font.GothamBold
+CloseButton.TextSize = 18
+CloseButton.AutoButtonColor = false
+CloseButton.Parent = TitleBar
+
+local closeCorner = Instance.new("UICorner")
+closeCorner.CornerRadius = UDim.new(0, 6)
+closeCorner.Parent = CloseButton
+
+CloseButton.MouseEnter:Connect(function()
+    TweenService:Create(CloseButton, TweenInfo.new(0.2), {BackgroundColor3 = ColorScheme.Error}):Play()
+end)
+
+CloseButton.MouseLeave:Connect(function()
+    TweenService:Create(CloseButton, TweenInfo.new(0.2), {BackgroundColor3 = ColorScheme.Darker}):Play()
+end)
+
+CloseButton.MouseButton1Click:Connect(function()
+    local tween = TweenService:Create(MainFrame, TweenInfo.new(0.3), {
+        Size = UDim2.new(0, 0, 0, 0),
+        Position = UDim2.new(0.5, 0, 0.5, 0) -- Kapanırken de ortada kalacak
+    })
+    tween:Play()
+    tween.Completed:Wait()
+    ScreenGui:Destroy()
+end)
+
+-- Player Info Panel
+local PlayerPanel = Instance.new("Frame")
+PlayerPanel.Name = "PlayerPanel"
+PlayerPanel.Size = UDim2.new(0, 220, 0, 90)
+PlayerPanel.Position = UDim2.new(0, 20, 1, -100)
+PlayerPanel.BackgroundColor3 = ColorScheme.Darker
+PlayerPanel.BackgroundTransparency = 0.2
+PlayerPanel.Parent = MainFrame
+
+local playerCorner = Instance.new("UICorner")
+playerCorner.CornerRadius = UDim.new(0, 10)
+playerCorner.Parent = PlayerPanel
+
+local playerHighlight = Instance.new("Frame")
+playerHighlight.Size = UDim2.new(0, 4, 1, 0)
+playerHighlight.Position = UDim2.new(0, 0, 0, 0)
+playerHighlight.BackgroundColor3 = ColorScheme.Primary
+playerHighlight.BorderSizePixel = 0
+playerHighlight.Parent = PlayerPanel
+
+CreateGradient(playerHighlight, 180)
+
+local PlayerAvatar = Instance.new("ImageLabel")
+PlayerAvatar.Name = "PlayerAvatar"
+PlayerAvatar.Size = UDim2.new(0, 50, 0, 50)
+PlayerAvatar.Position = UDim2.new(0, 10, 0.5, -25)
+PlayerAvatar.Image = game.Players:GetUserThumbnailAsync(Player.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size100x100)
+PlayerAvatar.Parent = PlayerPanel
+
+local avatarCorner = Instance.new("UICorner")
+avatarCorner.CornerRadius = UDim.new(0, 8)
+avatarCorner.Parent = PlayerAvatar
+
+local PlayerName = Instance.new("TextLabel")
+PlayerName.Name = "PlayerName"
+PlayerName.Size = UDim2.new(0, 150, 0, 20)
+PlayerName.Position = UDim2.new(0, 70, 0.3, -10)
+PlayerName.Text = Player.Name
+PlayerName.TextColor3 = ColorScheme.Text
+PlayerName.Font = Enum.Font.GothamBold
+PlayerName.TextSize = 14
+PlayerName.TextXAlignment = Enum.TextXAlignment.Left
+PlayerName.BackgroundTransparency = 1
+PlayerName.Parent = PlayerPanel
+
+local AccountAge = Instance.new("TextLabel")
+AccountAge.Name = "AccountAge"
+AccountAge.Size = UDim2.new(0, 150, 0, 15)
+AccountAge.Position = UDim2.new(0, 70, 0.7, -5)
+AccountAge.Text = Player.AccountAge.." days old"
+AccountAge.TextColor3 = Color3.new(0.7, 0.7, 0.8)
+AccountAge.Font = Enum.Font.Gotham
+AccountAge.TextSize = 11
+AccountAge.TextXAlignment = Enum.TextXAlignment.Left
+AccountAge.BackgroundTransparency = 1
+AccountAge.Parent = PlayerPanel
+
+-- Tab System
+local TabButtons = Instance.new("Frame")
+TabButtons.Name = "TabButtons"
+TabButtons.Size = UDim2.new(0, 160, 0, 450)
+TabButtons.Position = UDim2.new(0, 20, 0, 70)
+TabButtons.BackgroundTransparency = 1
+TabButtons.Parent = MainFrame
+
+local Tabs = {
+    {Name = "MAIN", Icon = "📁"},
+    {Name = "PLAYER", Icon = "👤"},
+    {Name = "VISUALS", Icon = "👀"},
+    {Name = "SERVER", Icon = "🌐"},
+    {Name = "SETTINGS", Icon = "⚙️"}
+}
+
+local TabFrames = {}
+
+for i, tab in ipairs(Tabs) do
+    local TabButton = Instance.new("TextButton")
+    TabButton.Name = tab.Name.."Button"
+    TabButton.Size = UDim2.new(1, 0, 0, 70)
+    TabButton.Position = UDim2.new(0, 0, (i-1)*0.16, 10)
+    TabButton.BackgroundColor3 = i == 1 and ColorScheme.Primary or ColorScheme.Gray
+    TabButton.BackgroundTransparency = i == 1 and 0 or 0.5
+    TabButton.Text = " "..tab.Icon.."  "..tab.Name
+    TabButton.TextColor3 = ColorScheme.Text
+    TabButton.Font = Enum.Font.GothamBold
+    TabButton.TextSize = 14
+    TabButton.TextXAlignment = Enum.TextXAlignment.Left
+    TabButton.AutoButtonColor = false
+    TabButton.Parent = TabButtons
+
+    local UICorner = Instance.new("UICorner")
+    UICorner.CornerRadius = UDim.new(0, 8)
+    UICorner.Parent = TabButton
+
+    local TabFrame = Instance.new("ScrollingFrame")
+    TabFrame.Name = tab.Name.."Frame"
+    TabFrame.Size = UDim2.new(0, 620, 0, 450)
+    TabFrame.Position = UDim2.new(0, 200, 0, 70)
+    TabFrame.BackgroundTransparency = 1
+    TabFrame.ScrollBarThickness = 5
+    TabFrame.ScrollBarImageColor3 = ColorScheme.Primary
+    TabFrame.Visible = i == 1
+    TabFrame.Parent = MainFrame
+    
+    local uiListLayout = Instance.new("UIListLayout")
+    uiListLayout.Padding = UDim.new(0, 10)
+    uiListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+    uiListLayout.Parent = TabFrame
+    
+    TabFrames[i] = TabFrame
+    
+    TabButton.MouseButton1Click:Connect(function()
+        for _, frame in pairs(TabFrames) do frame.Visible = false end
+        TabFrame.Visible = true
+        
+        for _, btn in pairs(TabButtons:GetChildren()) do
+            if btn:IsA("TextButton") then 
+                TweenService:Create(btn, TweenInfo.new(0.2), {
+                    BackgroundColor3 = ColorScheme.Gray,
+                    BackgroundTransparency = 0.5
+                }):Play()
+            end
+        end
+        
+        TweenService:Create(TabButton, TweenInfo.new(0.2), {
+            BackgroundColor3 = ColorScheme.Primary,
+            BackgroundTransparency = 0
+        }):Play()
+    end)
+end
+
+-- Improved Button Creation Function
+local function CreateButton(name, text, parent, callback)
+    local Button = Instance.new("TextButton")
+    Button.Name = name
+    Button.Size = UDim2.new(1, -20, 0, 50)
+    Button.Position = UDim2.new(0, 10, 0, 0)
+    Button.BackgroundColor3 = ColorScheme.DarkGray
+    Button.BackgroundTransparency = 0.3
+    Button.Text = "  "..text
+    Button.TextColor3 = ColorScheme.Text
+    Button.Font = Enum.Font.Gotham
+    Button.TextSize = 14
+    Button.TextXAlignment = Enum.TextXAlignment.Left
+    Button.AutoButtonColor = false
+    Button.LayoutOrder = #parent:GetChildren()
+    Button.Parent = parent
+
+    local UICorner = Instance.new("UICorner")
+    UICorner.CornerRadius = UDim.new(0, 8)
+    UICorner.Parent = Button
+
+    local highlight = Instance.new("Frame")
+    highlight.Name = "Highlight"
+    highlight.Size = UDim2.new(0, 4, 0.8, 0)
+    highlight.Position = UDim2.new(0, 0, 0.1, 0)
+    highlight.BackgroundColor3 = ColorScheme.Primary
+    highlight.BorderSizePixel = 0
+    highlight.Parent = Button
+
+    CreateGradient(highlight, 180)
+
+    local icon = Instance.new("TextLabel")
+    icon.Size = UDim2.new(0, 30, 0, 30)
+    icon.Position = UDim2.new(1, -40, 0.5, -15)
+    icon.BackgroundTransparency = 1
+    icon.Text = "→"
+    icon.TextColor3 = ColorScheme.Text
+    icon.Font = Enum.Font.GothamBold
+    icon.TextSize = 18
+    icon.Parent = Button
+
+    Button.MouseEnter:Connect(function()
+        TweenService:Create(Button, TweenInfo.new(0.2), {
+            BackgroundTransparency = 0.1,
+            TextColor3 = ColorScheme.Accent
+        }):Play()
+        TweenService:Create(icon, TweenInfo.new(0.2), {
+            TextColor3 = ColorScheme.Accent,
+            Position = UDim2.new(1, -35, 0.5, -15)
+        }):Play()
+    end)
+    
+    Button.MouseLeave:Connect(function()
+        TweenService:Create(Button, TweenInfo.new(0.2), {
+            BackgroundTransparency = 0.3,
+            TextColor3 = ColorScheme.Text
+        }):Play()
+        TweenService:Create(icon, TweenInfo.new(0.2), {
+            TextColor3 = ColorScheme.Text,
+            Position = UDim2.new(1, -40, 0.5, -15)
+        }):Play()
+    end)
+    
+    Button.MouseButton1Click:Connect(function()
+        TweenService:Create(Button, TweenInfo.new(0.1), {
+            BackgroundColor3 = ColorScheme.Accent,
+            TextColor3 = Color3.new(1, 1, 1)
+        }):Play()
+        TweenService:Create(highlight, TweenInfo.new(0.1), {
+            Size = UDim2.new(0, 8, 0.8, 0)
+        }):Play()
+        task.wait(0.1)
+        TweenService:Create(Button, TweenInfo.new(0.2), {
+            BackgroundColor3 = ColorScheme.DarkGray,
+            TextColor3 = ColorScheme.Text
+        }):Play()
+        TweenService:Create(highlight, TweenInfo.new(0.1), {
+            Size = UDim2.new(0, 4, 0.8, 0)
+        }):Play()
+        
+        -- Execute callback with error handling
+        local success, err = pcall(callback)
+        if not success then
+            ShowNotification("Error", "Failed to execute: "..err, ColorScheme.Error)
+        else
+            ShowNotification("Success", text.." executed successfully", ColorScheme.Success)
+        end
+    end)
+    
+    return Button
+end
+
+-- Premium Toggle Switch
+local function CreateToggle(name, text, parent, default, callback)
+    local ToggleFrame = Instance.new("Frame")
+    ToggleFrame.Name = name.."Toggle"
+    ToggleFrame.Size = UDim2.new(1, -20, 0, 50)
+    ToggleFrame.Position = UDim2.new(0, 10, 0, 0)
+    ToggleFrame.BackgroundTransparency = 1
+    ToggleFrame.LayoutOrder = #parent:GetChildren()
+    ToggleFrame.Parent = parent
+
+    local ToggleButton = Instance.new("TextButton")
+    ToggleButton.Name = "Button"
+    ToggleButton.Size = UDim2.new(0, 100, 0, 40)
+    ToggleButton.Position = UDim2.new(1, -110, 0.5, -20)
+    ToggleButton.BackgroundColor3 = default and ColorScheme.Success or ColorScheme.Error
+    ToggleButton.Text = default and "ON" or "OFF"
+    ToggleButton.TextColor3 = Color3.new(1, 1, 1)
+    ToggleButton.Font = Enum.Font.GothamBold
+    ToggleButton.TextSize = 12
+    ToggleButton.Parent = ToggleFrame
+
+    local toggleCorner = Instance.new("UICorner")
+    toggleCorner.CornerRadius = UDim.new(0, 20)
+    toggleCorner.Parent = ToggleButton
+
+    local toggleHighlight = Instance.new("Frame")
+    toggleHighlight.Size = UDim2.new(0, 4, 0.8, 0)
+    toggleHighlight.Position = UDim2.new(0, 0, 0.1, 0)
+    toggleHighlight.BackgroundColor3 = ColorScheme.Primary
+    toggleHighlight.BorderSizePixel = 0
+    toggleHighlight.Parent = ToggleFrame
+
+    CreateGradient(toggleHighlight, 180)
+
+    local ToggleLabel = Instance.new("TextLabel")
+    ToggleLabel.Name = "Label"
+    ToggleLabel.Size = UDim2.new(0, 200, 1, 0)
+    ToggleLabel.Position = UDim2.new(0, 15, 0, 0)
+    ToggleLabel.BackgroundTransparency = 1
+    ToggleLabel.Text = text
+    ToggleLabel.TextColor3 = ColorScheme.Text
+    ToggleLabel.Font = Enum.Font.Gotham
+    ToggleLabel.TextSize = 14
+    ToggleLabel.TextXAlignment = Enum.TextXAlignment.Left
+    ToggleLabel.Parent = ToggleFrame
+
+    local isToggled = default
+
+    local function UpdateToggle()
+        TweenService:Create(ToggleButton, TweenInfo.new(0.2), {
+            BackgroundColor3 = isToggled and ColorScheme.Success or ColorScheme.Error,
+            Text = isToggled and "ON" or "OFF"
+        }):Play()
+        
+        local success, err = pcall(function() callback(isToggled) end)
+        if not success then
+            ShowNotification("Error", "Toggle failed: "..err, ColorScheme.Error)
+            isToggled = not isToggled -- Revert on error
+            UpdateToggle()
+        else
+            ShowNotification("Info", text..(isToggled and " enabled" or " disabled"), 
+                isToggled and ColorScheme.Success or ColorScheme.Warning)
+        end
+    end
+
+    ToggleButton.MouseButton1Click:Connect(function()
+        isToggled = not isToggled
+        UpdateToggle()
+    end)
+
+    return ToggleFrame
+end
+
+-- Create Search Box
+local SearchBox = Instance.new("TextBox")
+SearchBox.Name = "SearchBox"
+SearchBox.Size = UDim2.new(1, -40, 0, 40)
+SearchBox.Position = UDim2.new(0, 20, 0, 10)
+SearchBox.BackgroundColor3 = ColorScheme.Darker
+SearchBox.BackgroundTransparency = 0.3
+SearchBox.TextColor3 = ColorScheme.Text
+SearchBox.PlaceholderText = "Search features..."
+SearchBox.PlaceholderColor3 = Color3.new(0.6, 0.6, 0.7)
+SearchBox.Font = Enum.Font.Gotham
+SearchBox.TextSize = 14
+SearchBox.TextXAlignment = Enum.TextXAlignment.Left
+SearchBox.Parent = TabFrames[1] -- Add to first tab
+
+local searchCorner = Instance.new("UICorner")
+searchCorner.CornerRadius = UDim.new(0, 8)
+searchCorner.Parent = SearchBox
+
+local searchPadding = Instance.new("UIPadding")
+searchPadding.PaddingLeft = UDim.new(0, 15)
+searchPadding.Parent = SearchBox
+
+local searchIcon = Instance.new("ImageLabel")
+searchIcon.Size = UDim2.new(0, 20, 0, 20)
+searchIcon.Position = UDim2.new(1, -30, 0.5, -10)
+searchIcon.BackgroundTransparency = 1
+searchIcon.Image = "rbxassetid://3926305904"
+searchIcon.ImageRectOffset = Vector2.new(964, 324)
+searchIcon.ImageRectSize = Vector2.new(36, 36)
+searchIcon.ImageColor3 = ColorScheme.Text
+searchIcon.Parent = SearchBox
+
+-- Store all buttons for search functionality
+local allButtons = {}
+
+-- Function to filter buttons based on search text
+local function FilterFeatures(searchText)
+    searchText = string.lower(searchText)
+    
+    for _, button in ipairs(allButtons) do
+        local buttonText = string.lower(button.Text)
+        if string.find(buttonText, searchText, 1, true) then
+            button.Visible = true
+        else
+            button.Visible = false
+        end
+    end
+end
+
+-- Connect search box to filter function
+SearchBox:GetPropertyChangedSignal("Text"):Connect(function()
+    FilterFeatures(SearchBox.Text)
+end)
+
+-- Add features to tabs and store buttons for search
+-- MAIN TAB
+table.insert(allButtons, CreateButton("InfiniteYield", "Infinite Yield", TabFrames[1], function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+end))
+
+table.insert(allButtons, CreateButton("combine", "Kendini Öldür - Det atılınca kullanabilirsin", TabFrames[1], function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/AsylumLife/refs/heads/main/Reset"))()
+end))
+
+local pos = Vector3.new(862.35, 13.00, -1586.57)
+table.insert(allButtons, CreateButton("prox", "İsyancı Ol - Sorunsuz", TabFrames[1], function()
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+    end
+end))
+
+table.insert(allButtons, CreateButton("occo", "Sakso Çek - R6", TabFrames[1], function()
+    loadstring(game:HttpGet("https://pastefy.app/wa3v2Vgm/raw"))()
+end))
+
+table.insert(allButtons, CreateButton("Ink", "Kill Aura - AutoFarm Vb.", TabFrames[1], function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/babayagaof0/-TurkCezaevi-MrBabafingos-Babayaga/refs/heads/main/cezayedikabi.lua"))()
+end))
+
+
+local pos = Vector3.new(785.78, 89.50, -1514.60)
+table.insert(allButtons, CreateButton("prox", "Kaçakcı Üst Katman - TP", TabFrames[1], function()
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+    end
+end))
+
+local pos = Vector3.new(510.62, 31.42, -252.69)
+table.insert(allButtons, CreateButton("prox", "Hücreler Üst Katman - TP", TabFrames[1], function()
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+    end
+end))
+
+local pos = Vector3.new(785.78, 89.50, -1514.60)
+table.insert(allButtons, CreateButton("prox", "Kaçakcı Üst Katman - TP", TabFrames[1], function()
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+    end
+end))
+
+local pos = Vector3.new(361.96, 16.87, -399.90)
+table.insert(allButtons, CreateButton("prox", "Avlu Üst Katman - TP", TabFrames[1], function()
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+    end
+end))
+
+local pos = Vector3.new(-2366.55, -29.39, -844.09)
+table.insert(allButtons, CreateButton("prox", "Çorak Topraklar Üst Katman - TP", TabFrames[1], function()
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+    end
+end))
+
+table.insert(allButtons, CreateButton("Ink", "Araba Hızı - 150X", TabFrames[1], function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/Temelozellik/refs/heads/main/ArabaH%C4%B1z"))()
+end))
+
+local pos = Vector3.new(503.27, 16.37, -251.20)
+table.insert(allButtons, CreateButton("prox", "Hücreler - TP", TabFrames[1], function()
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+    end
+end))
+
+local pos = Vector3.new(775.82, 20.20, -1606.02)
+table.insert(allButtons, CreateButton("prox", "Kaçakcı Bölgesi - TP", TabFrames[1], function()
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+    end
+end))
+
+local pos = Vector3.new(494.55, 16.37, -347.01)
+table.insert(allButtons, CreateButton("prox", "Çamaşırhane - TP", TabFrames[1], function()
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+    end
+end))
+
+local pos = Vector3.new(564.09, -1.33, -377.37)
+table.insert(allButtons, CreateButton("prox", "Duş Alma Yeri - TP", TabFrames[1], function()
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+    end
+end))
+
+local pos = Vector3.new(492.11, 1.26, -298.57)
+table.insert(allButtons, CreateButton("prox", "Fabrika - TP", TabFrames[1], function()
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+    end
+end))
+
+local pos = Vector3.new(449.87, 16.37, -198.80)
+table.insert(allButtons, CreateButton("prox", "Hücre Kaçakcısı - TP", TabFrames[1], function()
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+    end
+end))
+
+local pos = Vector3.new(268.80, 16.10, -252.88)
+table.insert(allButtons, CreateButton("prox", "Hapishane Sınırı - TP", TabFrames[1], function()
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+    end
+end))
+
+local pos = Vector3.new(374.68, -27.90, -345.47)
+table.insert(allButtons, CreateButton("prox", "Menu Spawn - TP", TabFrames[1], function()
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+    end
+end))
+
+local pos = Vector3.new(520.86, -22.02, -476.39)
+table.insert(allButtons, CreateButton("prox", "Otopark - TP", TabFrames[1], function()
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+    end
+end))
+
+local pos = Vector3.new(-297.33, 110.76, -373.57)
+table.insert(allButtons, CreateButton("prox", "Terk Edilmiş Kule - TP", TabFrames[1], function()
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+    end
+end))
+
+local pos = Vector3.new(1130.37, 114.22, -1074.65)
+table.insert(allButtons, CreateButton("prox", "Vampirin Yaşadığı yer - TP", TabFrames[1], function()
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+    end
+end))
+
+local pos = Vector3.new(-1162.31, 48.90, -1826.62)
+table.insert(allButtons, CreateButton("prox", "Gizemli Anime Kızı - TP", TabFrames[1], function()
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+    end
+end))
+
+local pos = Vector3.new(-1822.94, 10.56, -309.58)
+table.insert(allButtons, CreateButton("prox", "Başkent - TP", TabFrames[1], function()
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+    end
+end))
+
+local pos = Vector3.new(447.29, -29.40, -262.54)
+table.insert(allButtons, CreateButton("prox", "Harita Altı - TP", TabFrames[1], function()
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+    end
+end))
+
+-- PLAYER TAB
+table.insert(allButtons, CreateToggle("EspToggle", "AntiCheat Bypass", TabFrames[2], true, function(state)
+    -- ESP implementation would go here
+end))
+
+table.insert(allButtons, CreateToggle("BoxEsp", "Anti-lag", TabFrames[2], true, function(state)
+end))
+
+table.insert(allButtons, CreateToggle("Tracers", "HWID CHANGER", TabFrames[2], true, function(state)
+    print("Tracers:", state and "Enabled" or "Disabled")
+end))
+
+-- VISUALS TAB
+
+table.insert(allButtons, CreateButton("tel", "Elektirik Telleri Sil", TabFrames[3], function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/Temelozellik/refs/heads/main/Obje"))()
+end))
+
+table.insert(allButtons, CreateButton("NoGrass", "ESP LEGIT", TabFrames[3], function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP"))()
+end))
+
+table.insert(allButtons, CreateButton("NoFog", "AIMBOT LEGIT - F", TabFrames[3], function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/PATCHED/refs/heads/main/Scriptv99"))()
+end))
+
+table.insert(allButtons, CreateButton("FullBright", "FullBright", TabFrames[3], function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/PATCHED/refs/heads/main/Fullbright"))()
+end))
+
+-- SERVER TAB
+table.insert(allButtons, CreateButton("ServerHop", "Server Hop", TabFrames[4], function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/ServerHop.lua"))()
+end))
+
+table.insert(allButtons, CreateButton("Rejoin", "Rejoin Game", TabFrames[4], function()
+    game:GetService("TeleportService"):Teleport(game.PlaceId, Player)
+end))
+
+-- SETTINGS TAB
+table.insert(allButtons, CreateToggle("UIToggle", "UI Visible", TabFrames[5], true, function(state)
+    MainFrame.Visible = state
+end))
+
+table.insert(allButtons, CreateToggle("Watermark", "Show Watermark", TabFrames[5], true, function(state)
+    print("Watermark:", state and "Enabled" or "Disabled")
+end))
+
+table.insert(allButtons, CreateToggle("Notifications", "Notifications", TabFrames[5], true, function(state)
+    print("Notifications:", state and "Enabled" or "Disabled")
+end))
+
+-- Panic Button
+local PanicButton = Instance.new("TextButton")
+PanicButton.Name = "PanicButton"
+PanicButton.Size = UDim2.new(0, 140, 0, 45)
+PanicButton.Position = UDim2.new(1, -160, 1, -55)
+PanicButton.BackgroundColor3 = ColorScheme.Error
+PanicButton.Text = "🚨 PANIC"
+PanicButton.TextColor3 = Color3.new(1, 1, 1)
+PanicButton.Font = Enum.Font.GothamBlack
+PanicButton.TextSize = 16
+PanicButton.Parent = MainFrame
+
+local panicCorner = Instance.new("UICorner")
+panicCorner.CornerRadius = UDim.new(0, 8)
+panicCorner.Parent = PanicButton
+
+local panicGradient = Instance.new("UIGradient")
+panicGradient.Color = ColorSequence.new({
+    ColorSequenceKeypoint.new(0, ColorScheme.Error),
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 100, 100))
+})
+panicGradient.Parent = PanicButton
+
+PanicButton.MouseButton1Click:Connect(function()
+    local tween = TweenService:Create(PanicButton, TweenInfo.new(0.2), {
+        Size = UDim2.new(0, 160, 0, 50),
+        BackgroundColor3 = Color3.fromRGB(255, 30, 30)
+    })
+    tween:Play()
+    tween.Completed:Wait()
+    
+    -- Clear all scripts and close UI
+    for _, v in pairs(getconnections(game:GetService("ScriptContext").Error)) do
+        v:Disable()
+    end
+    
+    ScreenGui:Destroy()
+    game:GetService("Players").LocalPlayer:Kick("Panic button pressed - All scripts cleared")
+end)
+
+-- Keybind for UI (F10)
+UIS.InputBegan:Connect(function(input, gameProcessed)
+    if input.KeyCode == Enum.KeyCode.F10 then
+        MainFrame.Visible = not MainFrame.Visible
+        ShowNotification("Info", "UI "..(MainFrame.Visible and "shown" or "hidden"), 
+            MainFrame.Visible and ColorScheme.Success or ColorScheme.Warning)
+    end
+end)
+
+-- Animate UI opening (TAM ORTADAN GENİŞLEYEREK AÇILMA)
+MainFrame.Size = UDim2.new(0, 0, 0, 0)
+local OpenTween = TweenService:Create(MainFrame, TweenInfo.new(0.7, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {
+    Size = UDim2.new(0, 850, 0, 650),
+    Position = UDim2.new(0.5, -425, 0.5, -325) -- Açıldığında da ortada kalacak
+})
+OpenTween:Play()
+
+-- Initial notification
+task.spawn(function()
+    task.wait(1)
+    ShowNotification("Welcome", "Chaos Loader V15.0 loaded successfully!", ColorScheme.Primary)
+end)
