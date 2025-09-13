@@ -810,7 +810,7 @@ table.insert(allButtons, CreateButton("NoFog", "AIMBOT LEGIT - F", TabFrames[3],
 end))
 
 table.insert(allButtons, CreateButton("nofog255", "MOBILE AIMBOT LEGIT", TabFrames[3], function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/Universal/refs/heads/main/Mob"))()
+    loadstring(game:HttpGet(""))()
 end))
 
 table.insert(allButtons, CreateButton("FullBright", "FullBright", TabFrames[3], function()
