@@ -631,6 +631,9 @@ table.insert(allButtons, CreateButton("Ink", "Kill Aura - AutoFarm Vb.", TabFram
     loadstring(game:HttpGet("https://raw.githubusercontent.com/babayagaof0/-TurkCezaevi-MrBabafingos-Babayaga/refs/heads/main/cezayedikabi.lua"))()
 end))
 
+table.insert(allButtons, CreateButton("Ink", "Aqua Matrix - R6 Animasyon", TabFrames[1], function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ExploitFin/AquaMatrix/refs/heads/AquaMatrix/AquaMatrix"))()
+end))
 
 local pos = Vector3.new(785.78, 89.50, -1514.60)
 table.insert(allButtons, CreateButton("prox", "Kaçakcı Üst Katman - TP", TabFrames[1], function()
@@ -642,14 +645,6 @@ end))
 
 local pos = Vector3.new(510.62, 31.42, -252.69)
 table.insert(allButtons, CreateButton("prox", "Hücreler Üst Katman - TP", TabFrames[1], function()
-    local player = game.Players.LocalPlayer
-    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
-        player.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
-    end
-end))
-
-local pos = Vector3.new(785.78, 89.50, -1514.60)
-table.insert(allButtons, CreateButton("prox", "Kaçakcı Üst Katman - TP", TabFrames[1], function()
     local player = game.Players.LocalPlayer
     if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
         player.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
